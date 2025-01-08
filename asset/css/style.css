@@ -1,0 +1,269 @@
+body {
+  background-color:var(--bg-color);
+  color: var(--main-color);
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  .knewave-regular {
+    font-family: "Knewave", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+:root {
+  --main-color: #F4F3F5;
+  --second-color: #2560ff;
+  --bg-color : rgb(17 19 20);
+}
+
+#intro {
+  font-family: "Knewave", serif;
+  z-index: 99;
+  position: absolute;
+}
+
+section.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-color);
+  width: 100vw;
+  height: 100vh;
+  font-size: 10vh;
+  animation: portfolio 1s ease-in 3s;
+  font-family: "Holtwood One SC", serif;
+  animation-fill-mode: forwards;
+}
+
+@keyframes portfolio {
+  0% {
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+} 
+
+section div#bvn {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-color);
+  animation: bienvenue 1s ease-in 1s;
+  animation-fill-mode: forwards; 
+  color: var(--bg-color);
+}
+
+@keyframes bienvenue {
+  0% {
+
+  }
+  100% {
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+
+section div#portfo {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  animation: portfolio 1s ease-in 3s;
+  animation-fill-mode: forwards; 
+  color: var(--second-color);
+}
+
+@keyframes portfolio {
+  0% {
+  }
+
+  100% {
+    transform: translateY(-100%);
+    display: none;
+  }
+} 
+
+header,footer {
+  font-family: "Knewave", serif;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+}
+
+.navbar {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: var(--second-color);
+  padding: 5px 0;
+  gap: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.name-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+  position: absolute;
+  background-color: var(--second-color);
+  left: 10%;
+  z-index: 0;
+
+  width: 0; /* Taille initiale */
+  height: 49%;
+
+  overflow: hidden; /* Empêche le contenu de dépasser pendant l'animation */
+  transition: width 0.3s ease; /* Transition fluide sur la largeur */
+}
+
+.name-navbar.visible {
+  width: 200px; /* Largeur finale */
+}
+
+.nav-item {
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.icon img {
+  width: 30px;
+}
+
+.mainCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+}
+
+.card {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border-radius: 20px;
+  padding: 30px;
+  gap: 100px;
+  max-width: 800px;
+}
+
+.mainText {
+  text-align: left;
+}
+
+.cardName {
+  font-family: "Knewave", serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.UndetectText {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.circleUndetect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  stroke-dasharray: 440; /* Longueur totale */
+  stroke-dashoffset: 440; /* Caché au départ */
+  animation: progress 2s linear forwards 6s;
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.center-circle {
+  width: 80px;
+  height: 80px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+header,footer {
+font-size: 2rem;
+}
+ main {
+  height: 75vh;
+  flex-direction: column;
+ }
+ .navbar {
+  margin-bottom: 30%;
+  flex-direction: row;
+  gap: 30px;
+ }
+ .name-navbar {
+  display: none;
+ }
+}
