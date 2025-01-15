@@ -261,9 +261,12 @@ font-size: 2rem;
  .navbar {
   margin-bottom: 30%;
   flex-direction: row;
-  gap: 30px;
+  gap: 10px;
  }
  .name-navbar {
   display: none;
+ }
+ .card {
+  display: block;
  }
 }
