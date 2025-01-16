@@ -224,6 +224,10 @@ main {
   animation: progress 2s linear forwards 6s;
 }
 
+.mainCard .card:nth-child(2) .progress-circle {
+  background-color: orange;
+}
+
 @keyframes progress {
   to {
     stroke-dashoffset: 0;
