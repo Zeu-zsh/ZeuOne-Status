@@ -498,6 +498,10 @@ font-size: 2rem;
   }
 }
 
+.navbar {
+  top: 30%;
+}
+
 /* Ajustement des délais d'animation pour chaque carte */
 .card:nth-child(1) {
   animation-delay: 0s;
@@ -521,6 +525,7 @@ font-size: 2rem;
   gap: 10px;
   height: 60px;
   margin-top: 20px;
+  min-height: 60px;
 }
 
 #welcomeText {
@@ -531,6 +536,7 @@ font-size: 2rem;
   min-width: 120px;
   line-height: 1.5em;
   padding-right: 5px;
+  min-height: 1.5em;
 }
 
 .static-text {
@@ -549,4 +555,24 @@ font-size: 2rem;
 header {
   margin-bottom: 20px;
   padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .welcome-container {
+    min-height: 80px;
+  }
+
+  #welcomeText, .static-text {
+    font-size: 1.2em;
+    text-align: center;
+    white-space: normal;
+    min-height: 2.4em;
+  }
 }
